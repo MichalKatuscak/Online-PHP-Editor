@@ -1,0 +1,21 @@
+/* Design by Michal Katuščák */
+
+* {padding:0; margin:0;}
+
+html {height:100%;}
+body {height:100%; font-family:sans-serif;}
+h2 {padding:3px 0 0 10px;}
+.clear {clear:both;}
+#page {width:100%; height:100%; min-width:1000px; min-height:600px;}
+#header {width:100%; height:35px; background-color:#eee; border-bottom:1px #ccc solid; min-width:1000px;}
+#top {width:100%; height:30px; border-bottom:1px #ddd solid; min-width:1000px;} 
+#buttons {width:200px; height:25px; float:left; border-right:1px #ddd solid; padding:3px 5px 3px 10px;}
+#buttons button {padding:2px 5px;}
+#panels {height:30px; margin-left:210px; min-width:780px; overflow:auto; border-right:1px #ddd solid; padding-top:10px;}
+#panels span {border-top-right-radius:0.5em; border-top-left-radius:0.5em; cursor:pointer; border:1px #ddd solid; border-bottom:none; font-size:15px; padding:3px 10px; margin-left:5px; background-color:#eee;}
+#panels span.active {background-color:#e5e5e5;}
+#panels span:hover {background-color:#eaeaea;}
+#main {width:100%; height:80%; min-width:1000px; min-height:570px;}
+#left {width:200px; height:100%; float:left; border-right:1px #ddd solid; min-height:570px; padding:5px 5px 10px 10px;}
+#content {height:100%; margin-left:210px; min-width:780px; min-height:570px; overflow:auto; border-right:1px #ddd solid;}
+form, textarea#code {width:100%;height:100%;}

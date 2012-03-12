@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <title>Online PHP Editor</title>
+    <link rel="stylesheet" href="./codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="./templates/ope09/style.css">
+    <script src="./codemirror/lib/codemirror.js"></script>
+    <script src="./codemirror/mode/xml/xml.js"></script>
+    <script src="./codemirror/mode/javascript/javascript.js"></script>
+    <script src="./codemirror/mode/css/css.js"></script>
+    <script src="./codemirror/mode/clike/clike.js"></script>
+    <script src="./codemirror/mode/php/php.js"></script>
+    <link rel="stylesheet" href="./codemirror/theme/default.css">
+    <script language="javascript">
+      function loading () {
+          document.getElementById('editor').innerHTML += '<div id="ajax_loader" style="display:none;position:relative;top:10px;left:10px;"><img src="./images/ajax-loader.gif" title="Loading.."></div>';
+  }
+    </script>
+    {tpl var $header}
+  </head>
+  <body onload="loading()">
+    <div id="page" style="z-index:1;">
+      <div id="header">                                  
+        <img src="./templates/ope09/logo.png">
+      </div>
+      <div id="top">                                  
+        <div id="buttons">
+            <button onclick="save_this_file()" id="button_save" disabled="disabled"><img src="./templates/ope09/images/icons/save.png"> <span>Save</span></button>
+            <button onclick="download_this_file()"><img src="./templates/ope09/images/icons/download.png"> <span>Download</span></button>
+            <button onclick="ajax_open_window_upload_file()"><img src="./templates/ope09/images/icons/open.png"> <span>Open</span></button>
+        </div>
+        <div id="panels">
+            <span onclick="ajax_open_window_new_file()"><img src="./templates/ope09/images/icons/new.png" id="img_new"></span>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <div id="main">         
+        <div id="left">
+            <div id="block_ftp">
+              <h3>FTP Connect</h3>
+              <p><strong>Server:</strong><br>
+              {tpl var $ftp-server}
+              <p><strong>User:</strong><br>
+              {tpl var $ftp-username}
+              <p><strong>Folder:</strong><br>
+              {tpl var $ftp-folder}
+              <h3>Files</h3>
+                  <code>
+                    <ul>
+                      {tpl var $ftp-folders}
+                      {tpl var $ftp-files}
+                    </ul>
+                  </code>
+            </div>                   
+        </div>
+        <div id="content">
+            <div id="editor">
+            </div>
+        </div>
+      </div>
+    </div>
+    <div id="black_page" style="z-index:2;display:none;position:absolute;opacity:0.6;top:0;left:0;width:100%;height:100%;background-color:#000;"></div>
+    <div id="ajax_notice" style="z-index:3;">
+        <div id="ajax_notice_html"></div>
+    </div>
+ <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7994362-8']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </body> 
+</html>

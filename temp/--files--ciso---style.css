@@ -1,0 +1,60 @@
+/* Design by Enyeus */
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	text-align: center;
+	font-size: 15px;
+	background-image: url('./images/bg.png');
+}
+
+#page {
+	margin: 0px auto;
+	width: 800px;
+	min-height: 300px;
+	margin-top: 15px;
+}
+
+#header {
+	text-align:center;
+}
+
+#header h1, #header h2 {
+	display: none;
+}
+
+#header a img {
+	border: none;
+}
+#menu {
+	text-align: center;
+}
+#menu ul li {
+	list-style-type: none;
+	display: inline;
+	padding: 0 15px 0 15px;
+}
+
+#menu ul li a {
+	color: #444;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#menu ul li a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+#menu ul li a.active {
+	color: #000;
+	text-decoration: underline;
+}
+
+#content {
+	background-color: white;
+}

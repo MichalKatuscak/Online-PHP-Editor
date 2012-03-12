@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <title>Online PHP Editor</title>
+    <link rel="stylesheet" href="../../lib/codemirror.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="../../lib/codemirror.js"></script>
+    <script src="../xml/xml.js"></script>
+    <script src="../javascript/javascript.js"></script>
+    <script src="../css/css.js"></script>
+    <script src="../clike/clike.js"></script>
+    <script src="php.js"></script>
+    <link rel="stylesheet" href="../../theme/default.css">
+    <script language="javascript">
+      function loading () {
+        document.getElementsByClassName('CodeMirror-scroll').offsetWidth = document.body.offsetWidth-250;
+      }
+    </script>
+  </head>
+  <body onload="loading()">
+    <div id="page">
+      <div id="header">                                  
+        <img src="./logo.png">
+      </div>
+      <div id="top">                                  
+        <div id="buttons"><button>Save</button></div>
+        <div id="panels"><span class="active">index.php</span><span>config.php</span><span>help.php</span></div>
+      </div>
+      <div class="clear"></div>
+      <div id="main">         
+        <div id="left">
+          <h3>FTP Connect</h3>
+          <strong>Server:</strong><br>
+          ftp.katuscak.cz<br>
+          <strong>User:</strong><br>
+          michal<br><br>
+          <h3>Files</h3><code>
+            <ul style="">
+              <li>+images</li>
+              <li>-htdocs</li>
+                <ul>
+                  <li>index.php
+                  <li>style.css
+                </ul>
+            </ul></code>
+                   
+        </div>
+        <div id="content">
+
+<form><textarea id="code" name="code">
+<?php
+function hello($who) {
+	return "Hello " . $who;
+}
+?>
+<p>The program says <?= hello("World") ?>.</p>
+<script>
+	alert("And here is some JS code"); // also colored
+</script>
+</textarea></form>
+        
+        </div>
+      </div>
+
+    <script>
+      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        lineNumbers: true,
+        matchBrackets: true,
+        mode: "application/x-httpd-php",
+        indentUnit: 2,
+        indentWithTabs: true,
+        enterMode: "keep",
+        tabMode: "shift"
+      });
+    </script>
+  </body> 
+</html>

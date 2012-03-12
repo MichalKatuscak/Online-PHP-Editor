@@ -1,0 +1,29 @@
+<script type="text/javascript" src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php"> 
+</script> 
+<script type="text/javascript"> FB.init("005ba470e3e05aa9045ec09f3ff69a23","/xd_receiver.htm");
+</script><script type="text/javascript"> 
+			function show()
+			{
+				var template_data = 	{
+					 "images":[{"src":"http://iqtestzdarma.cz/lib/iq-image/testiq.php?code=PjY=",
+						     "href":"http://iqtestzdarma.cz/"}],
+					 "result":"162",
+			         "description":"Vysoká genialita"
+					};
+ 
+				FB.Connect.showFeedDialog(118348964667, template_data);
+			}
+			</script> 
+<br /><br />
+<div style="float: left; background-color: #CACACA; padding: 15px;"> 
+    <h1>Výsledek IQ testu</h1> 
+    <p> 
+    Gratulujeme! Úspìšnì jste dokonèili IQ test...
+    </p> 
+    <br /> 
+    Vaše IQ je: <h2 style="display: inline">162</h2> 
+    <br /><br /> 
+    <h2>Vysoká genialita</h2> 
+    <br /><br /> 
+    <a id="facebook" onclick="FB.Connect.requireSession( show ); return false;"><img src="http://iqtestzdarma.cz/images/facebookicon.png" align="middle" /> Sdílej výsledek na Facebook-u</a> 
+</div> 

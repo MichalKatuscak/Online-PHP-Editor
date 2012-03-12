@@ -1,0 +1,45 @@
+/* Design by Michal Katuščák */
+
+* {padding:0; margin:0;}
+@font-face {font-family:CMU; src:url('./fonts/cmunsx.otf');}
+
+html {height:100%;}
+body {height:100%; font-family:Sans-serif; overflow:hidden;}
+h1,h2,h3,h4,h5,h6 {font-family:CMU,Verdana,Sans-serif;}
+h2 {padding:3px 0 0 10px;}
+.clear {clear:both;}
+#page {width:100%; height:100%; min-width:1000px; min-height:600px;}
+#header {width:100%; height:35px; background-color:#eee; border-bottom:1px #ccc solid; min-width:1000px;}
+#top {width:100%; height:30px; border-bottom:1px #ddd solid; min-width:1000px;} 
+#buttons {width:200px; height:24px; float:left; border-right:1px #ddd solid; padding:3px 5px 3px 10px;}
+#buttons button {padding:1px 4px; font-size:10px; border-radius:0.5em; height:24px;}
+#buttons button[disabled] {background-color:#fff}
+#buttons button span {position:relative; bottom:4px;}
+#panels {height:24px; margin-left:210px; overflow:auto; padding-top:8px;}
+#panels span {border-top-right-radius:0.5em; border-top-left-radius:0.5em; cursor:pointer; border:1px #ddd solid; border-bottom:none; font-size:15px; padding:3px 0px; margin-left:5px; background-color:#eee;}
+#panels span a {padding-left:16px;}
+#panels span.active {background-color:#e5e5e5;}
+#panels span:hover {background-color:#eaeaea;}
+#panels span img.close_icon {visibility:hidden; position:relative; top:3px; border:none;}
+#panels span:hover img.close_icon {visibility:visible;}
+#main {width:100%; height:100%; min-width:1000px; min-height:570px;}
+#left {width:200px; height:100%; float:left; border-right:1px #ddd solid; min-height:570px; padding:5px 5px 10px 10px;}
+#content {max-height:100%; margin-left:210px; min-width:780px; min-height:570px; border-right:1px #ddd solid;}
+textarea#code {width:100%; height:100%;}
+#block_ftp {overflow-x:auto; max-height:570px;}
+#block_ftp p {font-size:85%;padding-bottom:8px;word-break:break-all;}
+#block_ftp h3 {margin-top:5px;}
+#block_ftp li img {position:relative;top:2px;padding-left:2px;}
+#block_ftp li {display:block;position:relative;}
+#block_ftp li:hover {background-color:#eee;}
+#block_ftp li span {position:relative;bottom:2px;}
+#block_ftp li img.delete {position:absolute;top:2px;right:5px;visibility:hidden;cursor:pointer;}
+#block_ftp li:hover img.delete {visibility:visible;}
+
+#ajax_notice {width:100%; display:none; position:absolute; top:0; left:0;}
+#ajax_notice_html {position:relative;width:500px; margin:100px auto; background-color:#fff; border-radius:1em; border:2px #000 solid;}
+#ajax_notice_html h1 {padding:10px 15px; border-bottom:2px #000 solid; background-color:#eee; border-top-left-radius:0.5em; border-top-right-radius:0.5em; text-align:center;}
+#ajax_notice_html p {padding: 10px 15px;}
+img.ajax_notice_close {position:absolute; top:15px; right:15px; visibility:hidden; cursor:pointer;}
+h1:hover img.ajax_notice_close {visibility:visible;}
+img#img_new {padding:0 3px; position:relative; top:3px;}
